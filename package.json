@@ -1,0 +1,19 @@
+{
+  "name": "kopretinka_server",
+  "version": "1.0.0",
+  "description": "Server for the watering system Kopretinka",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hendrychjan/kopretinka_server.git"
+  },
+  "author": "Jan Hendrych",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hendrychjan/kopretinka_server/issues"
+  },
+  "homepage": "https://github.com/hendrychjan/kopretinka_server#readme"
+}
