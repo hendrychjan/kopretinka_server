@@ -26,8 +26,8 @@ router.post("/register", adminAuth, async (req: Request, res: Response) => {
   }
 });
 
-// Get the module configuration
-router.get("/config", productCode, async (req: Request, res: Response) => {
+// Get the module
+router.get("/", productCode, async (req: Request, res: Response) => {
   // Extract the product code from the header and get the module
   const moduleCode = req.headers["product-code"] as string;
   const module = await ModulesService.getByProductCode(moduleCode, true);

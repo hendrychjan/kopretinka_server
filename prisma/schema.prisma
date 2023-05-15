@@ -8,19 +8,18 @@ datasource db {
 }
 
 model Module {
-  id          String @id @default(auto()) @map("_id") @db.ObjectId
-  productCode String @unique
-  ports       Port[]
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  productCode      String   @unique
+  lastConfigUpdate DateTime @default(now())
+  ports            Port[]
 }
 
 model Port {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
   number      Int
-  autoWater   Boolean
-  lastWatered DateTime?
-  threshold   Int
   lastValue   Int?
+  lastUpdate  DateTime?
   log         String[]
-  module      Module   @relation(references: [id], fields: [moduleId])
-  moduleId    String   @db.ObjectId
+  module      Module    @relation(references: [id], fields: [moduleId])
+  moduleId    String    @db.ObjectId
 }
